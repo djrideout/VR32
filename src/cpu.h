@@ -2,11 +2,12 @@
 #define CPU_H
 
 struct CPU {
-  int number;
+  unsigned int pc;
+  unsigned int reg[32];
+  unsigned int sysreg[32];
 };
 extern struct CPU cpu;
 
-void cpu_thing();
-void cpu_init();
+void cpu_reset();
 
 #endif /* CPU_H */

@@ -4,15 +4,15 @@
 #include "cpu.h"
 
 struct CPU cpu = {
-  .number = 2
+  .pc = 0xFFFFFFF0,
+  .reg = {0},
+  .sysreg = {0}
 };
 
-void cpu_thing() {
-  printf("\x1b[17;19HPrinted from CPU!");
-}
-
-void cpu_init() {
-  cpu.number = 5;
-  printf("\x1b[13;19HVB Init! %d", vb.number);
-  printf("\x1b[14;19HCPU Init! %d", cpu.number);
+void cpu_reset() {
+  cpu.pc = 0xFFFFFFF0;
+  for (int i = 0; i < 32; i++) {
+    cpu.reg[i] = 0;
+    cpu.sysreg[i] = 0;
+  }
 }

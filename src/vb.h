@@ -6,7 +6,6 @@ struct VirtualBoy {
 };
 extern struct VirtualBoy vb;
 
-void vb_thing();
-void vb_init();
+void vb_reset();
 
 #endif /* VB_H */
