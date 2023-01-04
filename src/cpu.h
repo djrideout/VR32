@@ -9,5 +9,7 @@ struct CPU {
 extern struct CPU cpu;
 
 void cpu_reset();
+void cpu_frame();
+void cpu_inst();
 
 #endif /* CPU_H */

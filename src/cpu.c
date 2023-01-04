@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-#include "vb.h"
 #include "cpu.h"
 
 enum SysReg {
@@ -33,4 +32,12 @@ void cpu_reset() {
   }
   cpu.sysreg[ECR] = 0x0000FFF0;
   cpu.sysreg[PSW] = 0x00008000;
+}
+
+void cpu_frame() {
+
+}
+
+void cpu_inst() {
+
 }
